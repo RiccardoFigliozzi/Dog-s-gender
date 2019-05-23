@@ -1,0 +1,14 @@
+# download library
+library(tidyverse)
+
+# read dataset
+dataset <- read_csv("../input/20170308hundehalter.csv")
+
+# check out the last few rows
+tail(dataset)
+
+# plot the gender of dogs
+ggplot(data = dataset, aes(x = GESCHLECHT_HUND))+
+geom_bar()+
+ggtitle("Dog's Gender")+
+xlab("")
